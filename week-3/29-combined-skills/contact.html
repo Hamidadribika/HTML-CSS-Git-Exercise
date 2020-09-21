@@ -31,6 +31,7 @@
           <label for="search-input">
             Search
           </label>
+
           <input id="search-input" class="site-search__input" type="text" name="search" />
           <svg
             aria-hidden="true"
@@ -56,14 +57,37 @@
         <form method="GET" class="contact-form">
           <div class="contact-form__field">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
+
           <div class="contact-form__field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="contact-form__field">
+            <label for="message">Message</label>
             <textarea
+              id="message"
               name="message"
               placeholder="Your message should not be longer than 200 words."
+              required
             ></textarea>
           </div>
+
+          <fieldset>
+            <legend>What branch are you interested in?</legend>
+
+            <input type="radio" name="branch " />
+            <label>London</label>
+
+            <input type="radio" name="branch " />
+            <label>Glasgow</label>
+
+            <input type="radio" name="branch " />
+            <label>Manchester</label>
+          </fieldset>
+
           <button type="submit">Send</button>
         </form>
       </main>
